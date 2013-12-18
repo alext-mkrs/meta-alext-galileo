@@ -1,15 +1,17 @@
-This layer depends on:
+This layer depends on meta-clanton-galileo layer.
 
-meta-clanton-galileo layer
 URI: http://downloadmirror.intel.com/23197/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.8.0.7z
 branch: n/a
 revision: 0.8.0
 
 Layer maintainer: Alex T <alext.mkrs@gmail.com>
 
-To add this layer when building Galileo images, you'll need to clone the repo contents into directory where you've unpacked your meta-clanton package, then pass the layer name to the setup.sh script.
+To add this layer when building Galileo images, you'll need to clone the repo
+contents into directory where you've unpacked your meta-clanton package, then
+pass the layer name to the setup.sh script.
 
-Full set of steps as per the BSP Building Guide + the steps needed to enable meta-alext-galileo layer are below:
+Full set of steps as per the BSP Building Guide + the steps needed to enable
+meta-alext-galileo layer are below:
 
 tar xzvf meta-clanton_v0.8.0.tar.gz
 cd meta-clanton_0.8.0
