@@ -1,0 +1,8 @@
+This layer depends on:
+
+meta-clanton-galileo layer
+URI: http://downloadmirror.intel.com/23197/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.8.0.7z
+branch: n/a
+revision: 0.8.0
+
+Layer maintainer: Alex T <alext.mkrs@gmail.com>
