@@ -1,0 +1,47 @@
+diff --git a/meta/cfg/kernel-cache/bsp/clanton/clanton.cfg b/meta/cfg/kernel-cache/bsp/clanton/clanton.cfg
+index 5c2673a..994b00f 100644
+--- a/meta/cfg/kernel-cache/bsp/clanton/clanton.cfg
++++ b/meta/cfg/kernel-cache/bsp/clanton/clanton.cfg
+@@ -1698,7 +1698,41 @@ CONFIG_VGA_CONSOLE=y
+ CONFIG_VGACON_SOFT_SCROLLBACK=y
+ CONFIG_VGACON_SOFT_SCROLLBACK_SIZE=64
+ CONFIG_DUMMY_CONSOLE=y
+-# CONFIG_SOUND is not set
++CONFIG_SOUND=m
++# CONFIG_SOUND_OSS_CORE is not set
++CONFIG_SND=m
++CONFIG_SND_TIMER=m
++CONFIG_SND_PCM=m
++CONFIG_SND_HWDEP=m
++CONFIG_SND_RAWMIDI=m
++# CONFIG_SND_SEQUENCER is not set
++# CONFIG_SND_MIXER_OSS is not set
++# CONFIG_SND_PCM_OSS is not set
++# CONFIG_SND_HRTIMER is not set
++# CONFIG_SND_RTCTIMER is not set
++# CONFIG_SND_DYNAMIC_MINORS is not set
++CONFIG_SND_SUPPORT_OLD_API=y
++CONFIG_SND_VERBOSE_PROCFS=y
++# CONFIG_SND_VERBOSE_PRINTK is not set
++# CONFIG_SND_DEBUG is not set
++CONFIG_SND_DMA_SGBUF=y
++# CONFIG_SND_RAWMIDI_SEQ is not set
++# CONFIG_SND_OPL3_LIB_SEQ is not set
++# CONFIG_SND_OPL4_LIB_SEQ is not set
++# CONFIG_SND_SBAWE_SEQ is not set
++# CONFIG_SND_EMU10K1_SEQ is not set
++# CONFIG_SND_DRIVERS is not set
++# CONFIG_SND_PCI is not set
++# CONFIG_SND_SPI is not set
++CONFIG_SND_USB=y
++CONFIG_SND_USB_AUDIO=m
++# CONFIG_SND_USB_UA101 is not set
++# CONFIG_SND_USB_USX2Y is not set
++# CONFIG_SND_USB_CAIAQ is not set
++# CONFIG_SND_USB_US122L is not set
++# CONFIG_SND_USB_6FIRE is not set
++# CONFIG_SND_SOC is not set
++# CONFIG_SOUND_PRIME is not set
+ 
+ #
+ # HID support
