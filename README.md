@@ -1,37 +1,47 @@
+Description:
+============
+
 **URI:** http://downloadmirror.intel.com/23197/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.8.0.7z
 
-**branch:** n/a
+**URI:** http://downloadmirror.intel.com/23171/eng/Board_Support_Package_Sources_for_Intel_Quark_v0.7.5.7z
 
-**revision:** 0.8.0
+**revision:** 0.8.0 & 0.7.5
 
 **Layer maintainer:** Alex T <alext.mkrs@gmail.com>
 
 This layer depends on the following layers from the above archive:
 
-- meta-clanton-galileo (elfutils fix)
-- meta-oe/meta-networking (ntp)
+- meta-clanton-galileo (elfutils fix for BSP 0.8.0)
+- meta-oe/meta-networking (ntp for BSP 0.8.0)
+- meta-clanton-bsp (USB audio enablement for BSP 0.7.5)
 
-You'll need to have them listed to build the image successfully.
+You'll need to have these listed in your `bblayers.conf` to build the image successfully.
+This will usually be the case already, but worth double-checking.
 
-All recipes and bbappend files are by default enabled. You can disable
-those you're not interested in by adding `.disabled` to the filenames.
+Due to the fact this is a collection of assorted fixes and feature adds, and even for
+different BSP versions, all recipes and bbappend files are disabled by default.
+You should enable those you're interested in by removing `.disabled` from the filenames.
 
-To add this layer when building Galileo images, you'll need to clone the repo
-contents into directory where you've unpacked your meta-clanton package, then
-pass the layer name to the setup.sh script.
-
-If you already have everything setup, then you'll need to add the path to the
-layer directory into your yocto_build/conf/bblayers.conf file manually, because
-running setup.sh after it was already run once won't work.
-
-Full set of steps as per the BSP Building Guide + the steps needed to enable
-meta-alext-galileo layer from scratch are below:
-
+Usage:
+======
+* If starting from scratch:
 ```
 tar xzvf meta-clanton_v0.8.0.tar.gz
 cd meta-clanton_0.8.0
 git clone https://github.com/alext-mkrs/meta-alext-galileo
 ./setup.sh -e "meta-clanton-galileo meta-alext-galileo"
 source poky/oe-init-build-env yocto_build/
+<Remove the `.disabled` suffix from recept filenames you're interested in>
 bitbake image-full
 ```
+
+* If you already have the Yocto build file structure in place:
+```
+cd YourExistingLayersDir
+git clone https://github.com/alext-mkrs/meta-alext-galileo
+<Append the full path to the cloned layer dir to the existing list
+in your `yocto_build/conf/bblayers.conf` file>
+<Remove the `.disabled` suffix from recept filenames you're interested in>
+bitbake image-full
+```
+
