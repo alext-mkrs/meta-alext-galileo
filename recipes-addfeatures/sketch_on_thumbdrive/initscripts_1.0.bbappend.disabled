@@ -1,0 +1,8 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+
+SRC_URI += "file://set_sketch_dir.sh"
+
+do_install_append() {
+    install -m 0755 ${WORKDIR}/set_sketch_dir.sh ${D}${sysconfdir}/init.d
+    update-rc.d -r ${D} set_sketch_dir.sh start 99 5 .
+}
