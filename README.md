@@ -14,6 +14,7 @@ This layer depends on the following layers from the above archive:
 - meta-clanton-galileo (elfutils fix for BSP 0.8.0)
 - meta-oe/meta-networking (ntp for BSP 0.8.0)
 - meta-clanton-bsp (USB audio enablement for BSP 0.7.5)
+- meta-oe/meta-oe (libav fix for BSP 0.8.0)
 
 You'll need to have these listed in your `bblayers.conf` to build the image successfully.
 This will usually be the case already, but worth double-checking.
