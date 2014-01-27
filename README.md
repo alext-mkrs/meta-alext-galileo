@@ -32,7 +32,7 @@ cd meta-clanton_0.8.0
 git clone https://github.com/alext-mkrs/meta-alext-galileo
 ./setup.sh -e "meta-clanton-galileo meta-alext-galileo"
 source poky/oe-init-build-env yocto_build/
-<Remove the `.disabled` suffix from recept filenames you're interested in>
+<Remove the `.disabled` suffix from recipe filenames you're interested in>
 bitbake image-full
 ```
 
@@ -42,7 +42,7 @@ cd YourExistingLayersDir
 git clone https://github.com/alext-mkrs/meta-alext-galileo
 <Append the full path to the cloned layer dir to the existing list
 in your `yocto_build/conf/bblayers.conf` file>
-<Remove the `.disabled` suffix from recept filenames you're interested in>
+<Remove the `.disabled` suffix from recipe filenames you're interested in>
 bitbake image-full
 ```
 
