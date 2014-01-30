@@ -1,0 +1,43 @@
+From 14f78d7769e0831063e8b06a49d50106d1c78c5c Mon Sep 17 00:00:00 2001
+From: Alex T <alext.mkrs@gmail.com>
+Date: Thu, 30 Jan 2014 22:40:26 +0100
+Subject: [PATCH] Adjusted LUA compilation/linking flags for redis 2.8.4
+
+Based on the original patch for 2.6.9 from
+Venture Research <tech@ventureresearch.com>
+---
+ deps/Makefile     | 4 ++--
+ deps/lua/Makefile | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/deps/Makefile b/deps/Makefile
+index 5a95545..b966a49 100644
+--- a/deps/Makefile
++++ b/deps/Makefile
+@@ -58,8 +58,8 @@ ifeq ($(uname_S),SunOS)
+ 	LUA_CFLAGS= -D__C99FEATURES__=1
+ endif
+ 
+-LUA_CFLAGS+= -O2 -Wall -DLUA_ANSI $(CFLAGS)
+-LUA_LDFLAGS+= $(LDFLAGS)
++LUA_CFLAGS+= -O2 -Wall -DLUA_ANSI -DLUA_USE_LINUX $(CFLAGS)
++LUA_LDFLAGS+= -Wl,-E -ldl -lreadline -lhistory -lncurses $(LDFLAGS)
+ 
+ lua: .make-prerequisites
+ 	@printf '%b %b\n' $(MAKECOLOR)MAKE$(ENDCOLOR) $(BINCOLOR)$@$(ENDCOLOR)
+diff --git a/deps/lua/Makefile b/deps/lua/Makefile
+index 209a132..352647a 100644
+--- a/deps/lua/Makefile
++++ b/deps/lua/Makefile
+@@ -5,7 +5,7 @@
+ # == CHANGE THE SETTINGS BELOW TO SUIT YOUR ENVIRONMENT =======================
+ 
+ # Your platform. See PLATS for possible values.
+-PLAT= none
++PLAT= linux
+ 
+ # Where to install. The installation starts in the src and doc directories,
+ # so take care if INSTALL_TOP is not an absolute path.
+-- 
+1.8.5.2
+
