@@ -19,8 +19,10 @@ Due to the fact this is a collection of assorted fixes and feature adds, and eve
 different BSP versions, all recipes and bbappend files are disabled by default.
 You should enable those you're interested in by removing `.disabled` from the filenames.
 
-Usage (for BSP 0.9.0, for 0.7.5 `bitbake` target names are different, see BSP Build Guide):
+Usage:
 ======
+
+**NOTE:** this is for BSP 0.9.0, for 0.7.5 `bitbake` target names are different, see BSP Build Guide.
 
 * If starting from scratch:
 ```
