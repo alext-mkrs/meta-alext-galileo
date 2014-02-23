@@ -1,0 +1,51 @@
+diff --git a/configure.in b/configure.in
+index bcfb3e8..8aecd97 100644
+--- a/configure.in
++++ b/configure.in
+@@ -739,7 +739,7 @@ fi
+ 
+ #Checks for header files.
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS(stdio.h unistd.h stdint.h fcntl.h time.h signal.h sys/ioctl.h sys/mman.h linux/videodev.h linux/videodev2.h sys/param.h sys/types.h)
++AC_CHECK_HEADERS(stdio.h unistd.h stdint.h fcntl.h time.h signal.h sys/ioctl.h sys/mman.h libv4l1-videodev.h linux/videodev2.h sys/param.h sys/types.h)
+ 
+ AC_CHECK_FUNCS(get_current_dir_name)
+ 
+diff --git a/motion.h b/motion.h
+index ccfd4d0..1f0be30 100644
+--- a/motion.h
++++ b/motion.h
+@@ -40,7 +40,7 @@
+ 
+ #define _LINUX_TIME_H 1
+ #if !defined(WITHOUT_V4L) && !defined(BSD)
+-#include <linux/videodev.h>
++#include <libv4l1-videodev.h>
+ #endif
+ 
+ #include <pthread.h>
+diff --git a/track.h b/track.h
+index a58275c..fc4c232 100644
+--- a/track.h
++++ b/track.h
+@@ -10,6 +10,7 @@
+ #define _INCLUDE_TRACK_H
+ 
+ #include "alg.h"
++#include <linux/videodev2.h>
+ 
+ struct trackoptions {
+     int dev;
+diff --git a/video.h b/video.h
+index e4e2f1b..e14aafd 100644
+--- a/video.h
++++ b/video.h
+@@ -12,7 +12,7 @@
+ 
+ #define _LINUX_TIME_H 1
+ #ifndef WITHOUT_V4L
+-#include <linux/videodev.h>
++#include <libv4l1-videodev.h>
+ #include <sys/mman.h>
+ #include "pwc-ioctl.h"
+ #endif
