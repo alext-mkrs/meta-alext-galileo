@@ -3,7 +3,7 @@ DESCRIPTION = "Redis is an open source, advanced key-value store."
 HOMEPAGE = "http://redis.io"
 SECTION = "libs"
 LICENSE = "BSD"
-LIC_FILES_CHKSUM="file://COPYING;md5=673e0ac66aac758f8f2140c6fc7947d2"
+LIC_FILES_CHKSUM="file://COPYING;md5=6b461289550ee3815f95e4dcef58cc5e"
 
 SRC_URI = "http://download.redis.io/releases/redis-${PV}.tar.gz \
            file://hiredis-use-default-CC-if-it-is-set.patch \
@@ -18,8 +18,8 @@ inherit update-rc.d
 INITSCRIPT_NAME = "redis-server"
 INITSCRIPT_PARAMS = "defaults 87"
 
-SRC_URI[md5sum] = "cc161dd8fc8a11727b1b2ad8db8f77a0"
-SRC_URI[sha256sum] = "6b6602321536401b8b46aa05ec509141506b689b420675685ffe147ae08c0c86"
+SRC_URI[md5sum] = "3c106b0f1128dc930684e2da88b2a03d"
+SRC_URI[sha256sum] = "7834c37f2ff186c46aef8e4a066dfbf1d6772a285aa31c19c58162f264f1007f"
 
 do_install() {
     export PREFIX=${D}/${prefix}
