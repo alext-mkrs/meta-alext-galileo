@@ -4,7 +4,7 @@ image-full-galileo (BSP 1.0.0 and above), the one for SD card.
 To be able to build the image, you'll need to implement two fixes in the Poky
 sources first:
 
-1) http://git.yoctoproject.org/cgit.cgi/poky-contrib/commit/?h=hongxu/fix-su&id=26207e241ddc469b951ffea26dfc0661817d124d
+1) http://patches.openembedded.org/patch/53881/
 2) https://lists.yoctoproject.org/pipermail/poky/2014-January/009560.html
 
 After building the image, you'll need to boot it and remove two packages to
