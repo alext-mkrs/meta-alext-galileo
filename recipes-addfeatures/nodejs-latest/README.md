@@ -1,1 +1,1 @@
-This recipe updates the node.js package to version 0.10.26.
+This recipe updates the node.js package to the latest stable version.
