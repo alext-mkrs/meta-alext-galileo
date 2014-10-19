@@ -18,8 +18,8 @@ inherit update-rc.d
 INITSCRIPT_NAME = "redis-server"
 INITSCRIPT_PARAMS = "defaults 87"
 
-SRC_URI[md5sum] = "196e0cf387d8885439add8a3e1cab469"
-SRC_URI[sha256sum] = "60f0310afb29bc3533d57c5805fb6a693eb1dee454a3a2ef51b07317f803f6d6"
+SRC_URI[md5sum] = "69023c3005664602268a5e2dbe23425c"
+SRC_URI[sha256sum] = "53c7cc639571729fa57d7baa7f81aec1d5886f86bac9c66f6ad06dbdaee236a7"
 
 do_install() {
     export PREFIX=${D}/${prefix}
