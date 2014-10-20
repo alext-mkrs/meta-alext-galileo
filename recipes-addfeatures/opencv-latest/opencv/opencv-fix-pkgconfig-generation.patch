@@ -7,9 +7,9 @@ The fix has been provided by Ray Rashif (code.opencv.org/issues/1925)
 
 Upstream-Status: Pending
 
-diff -Nbaur OpenCV-2.4.3.orig/cmake/OpenCVGenPkgconfig.cmake OpenCV-2.4.3/cmake/OpenCVGenPkgconfig.cmake
---- OpenCV-2.4.3.orig/cmake/OpenCVGenPkgconfig.cmake	2012-11-04 08:40:14.243505926 +0000
-+++ OpenCV-2.4.3/cmake/OpenCVGenPkgconfig.cmake	2012-11-04 08:40:42.286649120 +0000
+diff -Nbaur opencv-2.4.9.orig/cmake/OpenCVGenPkgconfig.cmake opencv-2.4.9/cmake/OpenCVGenPkgconfig.cmake
+--- opencv-2.4.9.orig/cmake/OpenCVGenPkgconfig.cmake	2012-11-04 08:40:14.243505926 +0000
++++ opencv-2.4.9/cmake/OpenCVGenPkgconfig.cmake	2012-11-04 08:40:42.286649120 +0000
 @@ -10,7 +10,7 @@
  # -------------------------------------------------------------------------------------------
  set(prefix      "${CMAKE_INSTALL_PREFIX}")
