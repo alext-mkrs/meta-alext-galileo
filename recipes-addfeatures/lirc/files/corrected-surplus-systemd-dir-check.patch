@@ -1,0 +1,26 @@
+From a98dab72317a21d556196deb179cda97a04439c0 Mon Sep 17 00:00:00 2001
+From: Alex T <alext.mkrs@gmail.com>
+Date: Mon, 10 Nov 2014 16:57:53 +0100
+Subject: [PATCH] Corrected surplus systemd dir check
+
+---
+ configure.ac |    3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 00460b7..44aeea0 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -424,8 +424,7 @@ PKG_CHECK_MODULES([SYSTEMD],[libsystemd],[AC_DEFINE(HAVE_SYSTEMD)],[true])
+ CFLAGS="$CFLAGS $SYSTEMD_CFLAGS"
+ LIBS="$LIBS $SYSTEMD_LIBS"
+ 
+-AC_CHECK_FILE([/usr/lib/systemd/system], [has_systemd_system=true],[true])
+-AM_CONDITIONAL([SYSTEMD_INSTALL],[test x"$has_systemd_system" = xtrue])
++AM_CONDITIONAL([SYSTEMD_INSTALL],[false])
+ 
+ dnl here we see what driver the user wants.
+ 
+-- 
+1.7.9.5
+
