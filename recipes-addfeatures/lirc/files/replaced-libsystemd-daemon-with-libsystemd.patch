@@ -1,0 +1,25 @@
+From 83a0b7785cd5a7bc5393663e185f42c330f46f4b Mon Sep 17 00:00:00 2001
+From: Alex T <alext.mkrs@gmail.com>
+Date: Mon, 10 Nov 2014 16:21:45 +0100
+Subject: [PATCH] Replaced libsystemd-daemon with libsystemd
+
+---
+ configure.ac |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 72c512d..00460b7 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -420,7 +420,7 @@ AC_CHECK_HEADERS(linux/i2c-dev.h,[
+   ]
+ )
+ 
+-PKG_CHECK_MODULES([SYSTEMD],[libsystemd-daemon],[AC_DEFINE(HAVE_SYSTEMD)],[true])
++PKG_CHECK_MODULES([SYSTEMD],[libsystemd],[AC_DEFINE(HAVE_SYSTEMD)],[true])
+ CFLAGS="$CFLAGS $SYSTEMD_CFLAGS"
+ LIBS="$LIBS $SYSTEMD_LIBS"
+ 
+-- 
+1.7.9.5
+
