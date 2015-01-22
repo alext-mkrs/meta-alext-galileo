@@ -1,14 +1,14 @@
 DESCRIPTION = "nodeJS Evented I/O for V8 JavaScript"
 HOMEPAGE = "http://nodejs.org"
 LICENSE = "MIT & BSD"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=4a31e6c424761191227143b86f58a1ef"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=e804bf1e856481415099460bc54d9316"
 
 DEPENDS = "openssl"
 
 SRC_URI = "http://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz \
 "
-SRC_URI[md5sum] = "f5fd3a03948ec5d12b49fdc7c49a5cac"
-SRC_URI[sha256sum] = "c2120d0e3d2d191654cb11dbc0a33a7216d53732173317681da9502be0030f10"
+SRC_URI[md5sum] = "2c00d8cf243753996eecdc4f6e2a2d11"
+SRC_URI[sha256sum] = "0043656bb1724cb09dbdc960a2fd6ee37d3badb2f9c75562b2d11235daa40a03"
 
 S = "${WORKDIR}/node-v${PV}"
 
