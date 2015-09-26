@@ -1,15 +1,15 @@
 DESCRIPTION = "nodeJS Evented I/O for V8 JavaScript"
 HOMEPAGE = "http://nodejs.org"
 LICENSE = "MIT & BSD"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=14115ff11211df04b031ec7d40b6d31b"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=e804bf1e856481415099460bc54d9316"
 
 DEPENDS = "openssl"
 
 SRC_URI = "http://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz \
 "
 
-SRC_URI[md5sum] = "5523ec4347d7fe6b0f6dda1d1c7799d5"
-SRC_URI[sha256sum] = "b23d64df051c9c969b0c583f802d5d71de342e53067127a5061415be7e12f39d"
+SRC_URI[md5sum] = "3f45f994f1f02736576bf7bff1870897"
+SRC_URI[sha256sum] = "513da8ed5e48abefdfab664f1cabc160238d314a0481148804aff8fc6552b78b"
 
 S = "${WORKDIR}/node-v${PV}"
 
@@ -38,5 +38,5 @@ do_install () {
 RDEPENDS_${PN} = "curl python-shell python-datetime python-subprocess python-crypt python-textutils python-netclient "
 RDEPENDS_${PN}_class-native = ""
 
-FILES_${PN} += "${libdir}/node/wafadmin ${libdir}/node_modules ${libdir}/dtrace ${datadir}/systemtap/tapset/node.stp"
+FILES_${PN} += "${libdir}/node/wafadmin ${libdir}/node_modules ${libdir}/dtrace"
 BBCLASSEXTEND = "native"
