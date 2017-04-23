@@ -4,10 +4,14 @@ Description:
 This Yocto layer is a collection of various fixes and feature additions
 for Intel Galileo board's Linux image (based on Yocto).
 
-These recipes are intended for all Galileo Board Support Package (BSP) versions,
-including the latest one. See build environment setup instructions under URI below.
+These recipes are intended for Galileo Board Support Package (BSP), were last tested
+with version 1.0.4 and are currently not actively maintained, so things may break
+and need adjustment with newer versions.
 
-**URI:** http://downloadmirror.intel.com/24355/eng/BSP-Patches-and-Build_Instructions.1.0.4.txt
+See build environment setup instructions under URI below and feel free to adjust them
+if current BSP versions require that. Pull requests with updates are more than welcome.
+
+**URI:** https://downloadmirror.intel.com/24355/eng/BSP-Patches-and-Build_Instructions.1.0.8.txt
 
 **Layer maintainer:** Alex T <alext.mkrs@gmail.com>
 
